@@ -1,4 +1,3 @@
-
 using System;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
@@ -14,19 +13,16 @@ namespace escoz
 
         public override void ViewDidLoad()
         {
-            MonthView = new CalendarMonthView();
-			MonthView.OnDateSelected += (date) => {
-				Console.WriteLine(String.Format("Selected {0}", date.ToShortDateString()));
-			};
-			MonthView.OnFinishedDateSelection = (date) => {
-				Console.WriteLine(String.Format("Finished selecting {0}", date.ToShortDateString()));
-			};
-			MonthView.IsDayMarkedDelegate = (date) => {
-				return (date.Day % 2==0) ? true : false;
-			};
-			MonthView.IsDateAvailable = (date)=>{
-				return (date > DateTime.Today);
-			};
+            MonthView = new CalendarMonthView(new RectangleF(0,0, 640, 1024), 
+            	new List<CalendarEvent> {
+            		new CalendarEvent {Key = 0, EventName = 'Test', EventTme ='2p', EventDate = new DateTime(2012, 8, 7, 14, 0, 0, 0)}
+            		
+            	});
+
+	    MonthView.eventSelected += (evt, rect) => {
+	    	//Do some stuff to handle the event being selected, the rectangle can be used
+	    	//to present a popover.
+	    }
 			
             View.AddSubview(MonthView);
         }
