@@ -1,6 +1,8 @@
+
 //
 //  CalendarMonthView.cs
 //
+//  Converted to use a containing rectangle and clickable objects for iPad use on August 8, 2012 by John Ackerman ackerman.johnc@gmail.com
 //  Converted to MonoTouch on 1/22/09 - Eduardo Scoz || http://escoz.com
 //  Originally reated by Devin Ross on 7/28/09  - tapku.com || http://github.com/devinross/tapkulibrary
 //
@@ -31,7 +33,6 @@
 //
 //  CalendarMonthView.cs
 //
-//  Converted to use a containing rectangle and clickable objects for iPad use on August 8, 2012 by John Ackerman ackerman.johnc@gmail.com
 //  Converted to MonoTouch on 1/22/09 - Eduardo Scoz || http://escoz.com
 //  Originally reated by Devin Ross on 7/28/09  - tapku.com || http://github.com/devinross/tapkulibrary
 //
