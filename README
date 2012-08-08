@@ -1,0 +1,4 @@
+This is a fork of the monotouch-controls library from escoz. The only modifications are to the calendar month view to 
+permit the user to utilize the calendar as an iPad control which dynamically fills a container passed in and presents
+a list of events passed in as clickable buttons on the scheduled day. It helps me so I am leaving it here in case it helps
+anyone else.
